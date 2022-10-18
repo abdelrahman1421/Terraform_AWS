@@ -2,7 +2,7 @@ resource "aws_route_table" "terraform_private_route_table" {
   vpc_id = aws_vpc.terraform_vpc.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.terraform_nat_gateway.id
   }
 

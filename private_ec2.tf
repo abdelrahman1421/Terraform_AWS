@@ -11,8 +11,8 @@ resource "aws_instance" "terraform_server_a" {
     volume_size           = "8"
     delete_on_termination = true
   }
-user_data = file("server_conf.sh")
-  
+  user_data = file("server_conf.sh")
+
   tags = {
     Name = "Terraform Server_A"
   }
@@ -32,7 +32,7 @@ resource "aws_instance" "terraform_server_b" {
     volume_size           = "8"
     delete_on_termination = true
   }
-user_data = file("server_conf.sh")
+  user_data = file("server_conf.sh")
   tags = {
     Name = "Terraform Server_B"
   }

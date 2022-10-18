@@ -1,5 +1,5 @@
 resource "aws_eip" "terraform_elastic_ip" {
-  vpc      = true
+  vpc = true
 }
 
 resource "aws_nat_gateway" "terraform_nat_gateway" {
