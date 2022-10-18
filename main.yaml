@@ -1,0 +1,19 @@
+- hosts: servers
+  remote_user: ubuntu
+  become_method: sudo
+  become: yes
+  tasks:
+    - name: Apt Update
+      apt:
+        update_cache: yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Transfer the script
+      copy: src=proxy_conf.sh dest=/home/ubuntu mode=0777
+
+    - name: Excute script
+      command: sudo sh /home/ubuntu/proxy_conf.sh

@@ -1,4 +1,5 @@
 .terraform
 .terraform.lock.hcl
 inventory
-*.terraform*
+terraform.tfstate.backup
+terraform.tfstate
