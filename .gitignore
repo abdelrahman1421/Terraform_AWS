@@ -1,5 +1,1 @@
-.terraform
-.terraform.lock.hcl
-inventory
-terraform.tfstate.backup
-terraform.tfstate
+*.terraform*

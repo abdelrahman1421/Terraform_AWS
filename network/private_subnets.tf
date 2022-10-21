@@ -1,5 +1,5 @@
 resource "aws_subnet" "terraform_private_subnet_a" {
-  vpc_id               = aws_vpc.terraform_vpc.id
+  vpc_id               = var.vpc_id
   cidr_block           = var.private_subnet_a_cidr
   availability_zone_id = "use1-az4"
   tags = {
@@ -7,7 +7,7 @@ resource "aws_subnet" "terraform_private_subnet_a" {
   }
 }
 resource "aws_subnet" "terraform_private_subnet_b" {
-  vpc_id               = aws_vpc.terraform_vpc.id
+  vpc_id               = var.vpc_id
   cidr_block           = var.private_subnet_b_cidr
   availability_zone_id = "use1-az5"
 
