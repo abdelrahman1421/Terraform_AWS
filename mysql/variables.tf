@@ -1,42 +1,12 @@
 
-variable "instance_ami" {
+variable "private_subnet_a_id" {
   type = string
 }
-variable "instance_type" {
+
+
+variable "private_subnet_b_id" {
   type = string
-
 }
-variable "ssh_key" {
-  type = string
-
-}
-
-variable "public_subnet_a_cidr" {
-  type = string
-
-}
-
-variable "public_subnet_b_cidr" {
-  type = string
-
-}
-
-variable "private_subnet_a_cidr" {
-  type = string
-
-}
-
-variable "private_subnet_b_cidr" {
-  type = string
-
-}
-
-variable "vpc_cidr" {
-  type = string
-
-}
-
-
 ######################
 variable "allocated_storage" {
   type = number

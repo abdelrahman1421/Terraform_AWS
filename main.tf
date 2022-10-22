@@ -50,3 +50,18 @@ module "loadbalancer" {
   terraform_server_a_id         = "${module.ec2.terraform_server_a}"
   terraform_server_b_id         = "${module.ec2.terraform_server_b}"
 }
+
+module "DataBase" {
+  source = "./mysql"
+  private_subnet_a_id = "${module.network.terraform_private_subnet_a_id}"
+  private_subnet_b_id = "${module.network.terraform_private_subnet_b_id}"
+  allocated_storage    = var.allocated_storage
+  db_name              = var.db_name
+  engine               = var.engine
+  engine_version       = var.engine_version
+  instance_class       = var.instance_class
+  username             = var.username
+  password             = var.password
+  storage_type = var.storage_type
+  identifier = var.identifier
+}

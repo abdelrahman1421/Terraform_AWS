@@ -7,5 +7,12 @@ instance_ami          = "ami-08c40ec9ead489470"
 instance_type         = "t2.micro"
 ssh_key               = "terraform"
 
-
-
+allocated_storage    = 10
+db_name              = "mydb"
+engine               = "mysql"
+engine_version       = "5.7"
+instance_class       = "db.t3.micro"
+username             = "admin"
+password             = "14February1999!!??"
+storage_type = "gp2"
+identifier = "mysql"
