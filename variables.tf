@@ -73,3 +73,10 @@ variable "storage_type" {
 variable "identifier" {
   type = string
 }
+
+variable "availability_zone_id_a" {
+  type = string
+}
+variable "availability_zone_id_b" {
+  type = string
+}
