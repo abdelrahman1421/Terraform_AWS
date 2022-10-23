@@ -8,6 +8,8 @@ instance_type          = "t2.micro"
 ssh_key                = "terraform"
 availability_zone_id_a = "use1-az4"
 availability_zone_id_b = "use1-az5"
+region = "us-east-1"
+
 
 allocated_storage = 10
 db_name           = "mydb"
@@ -18,3 +20,10 @@ username          = "admin"
 password          = "14February1999!!??"
 storage_type      = "gp2"
 identifier        = "mysql"
+
+cluster_id           = "cluster-example"
+elastic_engine               = "redis"
+node_type            = "cache.t3.micro"
+num_cache_nodes      = 1
+parameter_group_name = "default.redis3.2"
+port                 = 6379

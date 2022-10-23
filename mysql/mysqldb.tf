@@ -21,4 +21,5 @@ resource "aws_db_instance" "mysql" {
   storage_type = var.storage_type
   identifier = var.identifier
   publicly_accessible = false
+  depends_on = [aws_db_subnet_group.db_subnet_group]
 }

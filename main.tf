@@ -68,3 +68,16 @@ module "DataBase" {
   storage_type        = var.storage_type
   identifier          = var.identifier
 }
+
+module "ElasticCache" {
+  source = "./rediscashing"
+  terraform_private_subnet_a_id = module.network.terraform_private_subnet_a_id
+  terraform_private_subnet_b_id = module.network.terraform_private_subnet_b_id
+  cluster_id = var.cluster_id
+  elastic_engine = var.elastic_engine
+  node_type = var.node_type
+  num_cache_nodes = var.num_cache_nodes
+  parameter_group_name = var.parameter_group_name
+  port = var.port
+
+}

@@ -80,3 +80,27 @@ variable "availability_zone_id_a" {
 variable "availability_zone_id_b" {
   type = string
 }
+variable "region" {
+  type = string
+}
+
+####################
+
+variable "cluster_id" {
+  type = string
+}
+variable "elastic_engine" {
+  type = string
+}
+variable "node_type" {
+  type = string
+}
+variable "num_cache_nodes" {
+  type = number
+}
+variable "parameter_group_name" {
+  type = string
+}
+variable "port" {
+  type = string
+}
